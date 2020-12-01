@@ -8,14 +8,14 @@ import io.netty.handler.codec.http.websocketx.WebSocketFrame;
  * @date 2020-12-01 16:12
  * @project netty-chat
  */
-public class TeacherWebSockerFrame extends WebSocketFrame {
+public class TeacherWebSocketFrame extends WebSocketFrame {
 
 
-    protected TeacherWebSockerFrame(ByteBuf binaryData) {
+    protected TeacherWebSocketFrame(ByteBuf binaryData) {
         super(binaryData);
     }
 
-    protected TeacherWebSockerFrame(boolean finalFragment, int rsv, ByteBuf binaryData) {
+    protected TeacherWebSocketFrame(boolean finalFragment, int rsv, ByteBuf binaryData) {
         super(finalFragment, rsv, binaryData);
     }
 
