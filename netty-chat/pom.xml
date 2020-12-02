@@ -14,6 +14,14 @@
     <name>netty-chat</name>
     <description>聊天测试</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.chxlay</groupId>
+            <artifactId>netty-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

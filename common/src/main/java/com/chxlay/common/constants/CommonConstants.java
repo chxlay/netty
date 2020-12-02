@@ -1,4 +1,4 @@
-package com.chxlay.chat.constants;
+package com.chxlay.common.constants;
 
 /**
  * @author Alay
