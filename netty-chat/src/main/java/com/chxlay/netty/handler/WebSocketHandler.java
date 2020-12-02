@@ -1,7 +1,7 @@
-package com.chxlay.netty.chat.handler;
+package com.chxlay.netty.handler;
 
-import com.chxlay.netty.chat.constants.CommonConstants;
-import com.chxlay.netty.chat.constants.RequestHeader;
+import com.chxlay.netty.constants.CommonConstants;
+import com.chxlay.netty.constants.RequestHeader;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;

@@ -1,4 +1,4 @@
-package com.chxlay.netty.chat.constants;
+package com.chxlay.netty.constants;
 
 /**
  * @author Alay
