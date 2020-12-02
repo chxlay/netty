@@ -1,4 +1,4 @@
-package com.chxlay.netty.config;
+package com.chxlay.chat.config;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;

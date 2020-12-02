@@ -1,4 +1,4 @@
-package com.chxlay.netty.config;
+package com.chxlay.chat.config;
 
 import io.netty.channel.nio.NioEventLoopGroup;
 import org.springframework.context.annotation.Bean;

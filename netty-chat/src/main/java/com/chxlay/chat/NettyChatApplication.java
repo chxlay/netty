@@ -1,6 +1,6 @@
-package com.chxlay.netty;
+package com.chxlay.chat;
 
-import com.chxlay.netty.config.ChatServerApplication;
+import com.chxlay.chat.config.ChatServerApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

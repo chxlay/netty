@@ -1,4 +1,4 @@
-package com.chxlay.netty.handler;
+package com.chxlay.chat.handler;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;

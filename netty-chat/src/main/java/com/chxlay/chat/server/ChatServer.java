@@ -1,6 +1,6 @@
-package com.chxlay.netty.server;
+package com.chxlay.chat.server;
 
-import com.chxlay.netty.handler.ChatInitializer;
+import com.chxlay.chat.handler.ChatInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;

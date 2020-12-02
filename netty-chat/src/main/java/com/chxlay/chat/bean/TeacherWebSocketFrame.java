@@ -1,4 +1,4 @@
-package com.chxlay.netty.bean;
+package com.chxlay.chat.bean;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.handler.codec.http.websocketx.WebSocketFrame;
