@@ -1,4 +1,4 @@
-package com.braineex.netty.chat.handler;
+package com.chxlay.netty.chat.handler;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;

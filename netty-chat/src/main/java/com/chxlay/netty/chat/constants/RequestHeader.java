@@ -1,4 +1,4 @@
-package com.braineex.netty.chat.constants;
+package com.chxlay.netty.chat.constants;
 
 /**
  * @author Alay

@@ -1,6 +1,6 @@
-package com.braineex.netty;
+package com.chxlay.netty;
 
-import com.braineex.netty.chat.config.ChatServerApplication;
+import com.chxlay.netty.chat.config.ChatServerApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

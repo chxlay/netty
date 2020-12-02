@@ -1,6 +1,6 @@
-package com.braineex.netty.chat.server;
+package com.chxlay.netty.chat.server;
 
-import com.braineex.netty.chat.handler.ChatInitializer;
+import com.chxlay.netty.chat.handler.ChatInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;

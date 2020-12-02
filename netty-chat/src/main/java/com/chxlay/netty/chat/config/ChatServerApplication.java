@@ -1,4 +1,4 @@
-package com.braineex.netty.chat.config;
+package com.chxlay.netty.chat.config;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
