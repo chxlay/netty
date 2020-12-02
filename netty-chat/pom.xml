@@ -10,6 +10,7 @@
     <groupId>com.chxlay</groupId>
     <artifactId>netty-chat</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>netty-chat</name>
     <description>聊天测试</description>
 
