@@ -28,4 +28,5 @@ public enum ResultEnum {
         this.code = code;
         this.message = message;
     }
+
 }

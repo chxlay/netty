@@ -23,7 +23,8 @@
     <modules>
         <module>netty-chat</module>
         <module>time-server</module>
-        <module>common</module>
+        <module>netty-common</module>
+        <module>file-server</module>
     </modules>
 
     <dependencies>

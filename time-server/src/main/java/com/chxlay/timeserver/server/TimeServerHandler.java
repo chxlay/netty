@@ -31,7 +31,7 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
         if ("TIME_ORDER".equals(request)){
             response = DateUtil.toString(LocalDateTime.now(), DateUtil.YEAR_TO_S);
         }else {
-            response= ResultEnum.ERROR_TOKEN.getMessage();
+            response = ResultEnum.ERROR_TOKEN.getMessage();
         }
         // 构建返回的数据,防止粘包，加入 System.getProperty("line.separator")
         byte[] buff = (response + System.getProperty("line.separator")).getBytes();
