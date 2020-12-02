@@ -21,6 +21,7 @@
 
     <modules>
         <module>netty-chat</module>
+        <module>time-server</module>
     </modules>
 
     <dependencies>
