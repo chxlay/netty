@@ -2,6 +2,7 @@ package com.chxlay.chat.config;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelFuture;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -27,10 +28,13 @@ public class ChatServerApplication {
      */
     public void start() throws InterruptedException {
         System.err.println("Netty 启动成功");
-        channel = bootstrap.bind(8888)
-                .sync().channel()
-                .closeFuture()
-                .sync().channel();
+        ChannelFuture future = bootstrap
+                // 绑定端口
+                .bind(8888).sync()
+                // 关闭通道
+                .channel().closeFuture()
+                .sync();
+        this.channel = future.channel();
     }
 
     /**

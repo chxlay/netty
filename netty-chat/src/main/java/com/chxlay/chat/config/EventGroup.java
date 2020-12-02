@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @project netty-chat
  */
 @Component
-public class EvenGroup {
+public class EventGroup {
 
 
     /**
@@ -19,7 +19,7 @@ public class EvenGroup {
      *
      * @return
      */
-    @Bean(destroyMethod = "shutdownGracefully")
+    @Bean(name = "bossGroup", destroyMethod = "shutdownGracefully")
     public NioEventLoopGroup bossGroup() {
         NioEventLoopGroup executors = new NioEventLoopGroup();
         return executors;
@@ -31,8 +31,8 @@ public class EvenGroup {
      *
      * @return
      */
-    @Bean(destroyMethod = "shutdownGracefully")
-    public NioEventLoopGroup workGroup() {
+    @Bean(name = "workerGroup", destroyMethod = "shutdownGracefully")
+    public NioEventLoopGroup workerGroup() {
         NioEventLoopGroup executors = new NioEventLoopGroup();
         return executors;
     }

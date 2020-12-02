@@ -61,7 +61,7 @@ public class TimeServer {
                     */
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
 
-            // 绑定地址
+            // 绑定端口
             ChannelFuture future = serverBootstrap.bind(port).sync();
 
             // 关闭通道

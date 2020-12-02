@@ -12,9 +12,9 @@
     }
     if (window.WebSocket) {
         // ws 必须,代表 WebSocket 请求，连接 Netty 连接
-        // socket = new WebSocket("ws://127.0.0.1:8888/websocket");
+        socket = new WebSocket("ws://127.0.0.1:8888/websocket");
         // 开启内网穿透测试
-        socket = new WebSocket("ws://zentao.braineex.com:8888/websocket");
+        // socket = new WebSocket("ws://zentao.braineex.com:8888/websocket");
         socket.onmessage = function (event) {
             var ta = document.getElementById('responseText');
             ta.value = ta.value + '\n' + event.data

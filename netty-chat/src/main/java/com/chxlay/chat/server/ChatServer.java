@@ -6,6 +6,7 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
@@ -19,9 +20,11 @@ public class ChatServer {
     @Autowired
     private ChatInitializer chatInitializer;
     @Autowired
+    @Qualifier(value = "bossGroup")
     private NioEventLoopGroup bossGroup;
     @Autowired
-    private NioEventLoopGroup workGroup;
+    @Qualifier(value = "workerGroup")
+    private NioEventLoopGroup workerGroup;
 
 
     /**
@@ -32,7 +35,7 @@ public class ChatServer {
     @Bean
     public ServerBootstrap bootstrap() {
         ServerBootstrap serverBootstrap = new ServerBootstrap();
-        serverBootstrap.group(bossGroup, workGroup)
+        serverBootstrap.group(bossGroup, workerGroup)
                 .channel(NioServerSocketChannel.class)
                 // 可以直接匿名内部类实现 chatInitializer
                 .childHandler(chatInitializer)

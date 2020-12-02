@@ -34,7 +34,7 @@ public class ChatInitializer extends ChannelInitializer<SocketChannel> {
         // 创建握手操作
         socketChannel.pipeline().addLast(new WebSocketServerProtocolHandler("/websocket"));
         // 自定义的握手操作
-        // socketChannel.pipeline().addLast(webSocketHandler);
+        socketChannel.pipeline().addLast(webSocketHandler);
 
         // 将自定义的处理逻辑 Handler 加入
         socketChannel.pipeline().addLast(chatHandler);
