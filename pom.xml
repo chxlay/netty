@@ -25,6 +25,7 @@
         <module>time-server</module>
         <module>netty-common</module>
         <module>file-server</module>
+        <module>heart-beat</module>
     </modules>
 
     <dependencies>

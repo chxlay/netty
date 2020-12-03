@@ -80,7 +80,7 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
         for (Channel channel : channels) {
             channel.writeAndFlush(new TextWebSocketFrame(address + "退出聊天室"));
         }
-        // 将用户通道移除通道组
-        channels.remove(ctx.channel());
+        // 将用户通道移除通道组,无需手动的移除,Netty会自己实现移除 GlobalEventExecutor.INSTANCE
+        // channels.remove(ctx.channel());
     }
 }

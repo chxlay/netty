@@ -130,8 +130,6 @@ public class HttpFileServerHandler extends ChannelInboundHandlerAdapter {
         ChannelFuture channelFuture = ctx.writeAndFlush(response);
         // 发送数据结束后关闭通道
         channelFuture.addListener(ChannelFutureListener.CLOSE);
-
-
     }
 
 
