@@ -30,8 +30,8 @@ public class ChatInitializer extends ChannelInitializer<SocketChannel> {
                 .addLast(new HttpServerCodec())
                 // 向客户端发送 HTML5 的文件
                 .addLast(new ChunkedWriteHandler())
-                // 将多条信息整合为一条
-                .addLast(new HttpObjectAggregator(65536))
+                // 将多条信息整合为一条,将一个Http消息尽心聚合
+                .addLast(new HttpObjectAggregator(8192))
                 // HttpRequestDecoder 和 HttpResponseEncoder 的组合,处理解码编码
                 .addLast("httpServerCodec", new HttpServerCodec())
                 // 创建握手操作

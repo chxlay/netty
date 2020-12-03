@@ -26,6 +26,8 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
                 case ALL_IDLE:
                     eventType = "读写空闲";
                     break;
+                default:
+                    break;
             }
             System.out.println(ctx.channel().remoteAddress() + "超时事件: " + eventType);
 
