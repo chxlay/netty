@@ -18,6 +18,7 @@
         <java.version>1.8</java.version>
         <netty.version>4.1.52.Final</netty.version>
         <hutool.version>5.4.2</hutool.version>
+        <protobuf.version>4.0.0-rc-2</protobuf.version>
     </properties>
 
     <modules>
@@ -26,6 +27,7 @@
         <module>netty-common</module>
         <module>file-server</module>
         <module>heart-beat</module>
+        <module>protocol-buffer</module>
     </modules>
 
     <dependencies>

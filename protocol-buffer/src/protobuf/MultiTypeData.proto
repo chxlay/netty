@@ -1,0 +1,74 @@
+/**
+ * 扩展 ProtoBuf拦截器的作用类,new ProtobufDecoder(Proto文件生成的最外层的类示例)
+ * 思路：将所有需要编解码的 类 定义入 最外层的 类中去
+ * 最外层类 内部定义枚举，枚举的每一个对象就是需要的编解码的一个类
+ * 如下：
+ */
+
+syntax = "proto2";
+// protobuf 文件的包名（如果没有指定java_package，此名将作为 Java 包名）
+package com.chxlay.protobuf;
+
+// 优化模式，默认值 SPEED
+option optimize_for = SPEED;
+
+// 显示的指定生成的 Java 的包名（生成的Java文件路径，可选的，若不定义，将以 proto的package 作为包名）
+option java_package = "com.chxlay.protobuf";
+// 显示的吸顶生成的 Java 类名(可选的，若不定义，将于 最外层的 message 类名作为)
+option java_outer_classname = "MultiTypeData";
+
+
+/**
+ * 最大内部类
+ */
+message ProtoData{
+
+  // 枚举类型映射具体数据传输的类型
+  enum DataType{
+    PersonType = 1;
+    StudentType = 2;
+    TeacherType = 3;
+  }
+
+  // 必须定义一个 required 枚举类型的字段
+  required DataType data_type = 1;
+
+
+  /**
+   * 官方文档：https://developers.google.com/protocol-buffers/docs/proto#oneof
+   * 如果你有一个消息，有多可选字段，而最多同一时刻只有一个字段会被设值,就可以强制的使用 oneof 特性强制应用这种行为节省内存空间
+   * 所有字段共享内存空间，后赋值的字段会生效，前面设值的字段的内存会被自动清除内存空间
+   */
+  oneof data_body{
+    Person person = 2;
+    Student student = 3;
+    Teacher teacher = 4;
+  }
+
+}
+
+// 具体数据的类 1
+message Person{
+  optional string name = 1;
+  optional int32 age = 2;
+  optional string sex = 3;
+  optional string citizenship = 4;
+  optional string address = 5;
+}
+
+// 具体数据的类 2
+message Student{
+  optional int32 stu_id = 1;
+  optional string name = 2;
+  optional string grade = 3;
+}
+
+
+// 具体数据的类 3
+message Teacher{
+  optional int32 id = 1;
+  optional string name = 2;
+  optional string sex = 3;
+  optional string rank = 4;
+  optional string subject = 5;
+}

@@ -1,0 +1,24 @@
+syntax = "proto2";
+// protobuf 文件的包名（如果没有指定java_package，此名将作为 Java 包名）
+package com.chxlay.protobuf;
+
+// 优化模式，默认值 SPEED
+option optimize_for = SPEED;
+
+// 显示的指定生成的 Java 的包名（生成的Java文件路径，可选的，若不定义，将以 proto的package 作为包名）
+option java_package = "com.chxlay.protobuf";
+// 显示的吸顶生成的 Java 类名(可选的，若不定义，将于 最外层的 message 类名作为)
+option java_outer_classname = "ProtoBufData";
+
+
+// 定义一个类(生成 Java 类后 Person 类将成为内部类,但也是定义属性数据的最外层的类，即最大的内部类)
+message Person{
+  required string name = 1;
+  optional int32 age = 2;
+  optional string address = 3;
+}
+
+// 源代码生成命令，生成的Java文件路径存放位置   protobuf源文件路径
+// protoc --java_out=src/main/java src/protobuf/Student.proto
+
+// 注意，生成的文件千万不要对其进行任何的修改，当做一个只读文件使用
