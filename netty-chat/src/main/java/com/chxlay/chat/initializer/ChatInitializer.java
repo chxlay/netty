@@ -1,5 +1,7 @@
-package com.chxlay.chat.handler;
+package com.chxlay.chat.initializer;
 
+import com.chxlay.chat.handler.ChatHandler;
+import com.chxlay.chat.handler.WebSocketHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
