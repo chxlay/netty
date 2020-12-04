@@ -1,2 +1,2 @@
 # netty
-学习测试，demo 来源：https://github.com/WangZaier/nettyChat
+学习测试，demo，可能部分代码无法运行，伪代码
