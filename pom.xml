@@ -19,6 +19,7 @@
         <netty.version>4.1.52.Final</netty.version>
         <hutool.version>5.4.2</hutool.version>
         <protobuf.version>4.0.0-rc-2</protobuf.version>
+        <thrift.version>0.13.0</thrift.version>
     </properties>
 
     <modules>
@@ -28,6 +29,7 @@
         <module>file-server</module>
         <module>heart-beat</module>
         <module>protocol-buffer</module>
+        <module>apache-thrift</module>
     </modules>
 
     <dependencies>
