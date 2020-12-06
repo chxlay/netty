@@ -1,0 +1,63 @@
+syntax = 'proto3';
+
+package com.chxlay.poto;
+
+// 优化模式，默认值 SPEED
+option optimize_for = SPEED;
+
+option java_package = "com.chxlay.grpc.poto";
+option java_outer_classname = "StudentProto";
+// 是否生成多个文件（protbuf重使用的是一个文件的形式）
+option java_multiple_files = true;
+
+// 定义请求数据
+message ProtoRequest{
+  int32 stu_id = 1;
+}
+
+// 定义响应数据
+message ProtoResponse{
+  string stu_name = 1;
+}
+
+
+// 定义RPC 的方法，通过 关键字 service 定义
+service StudentService{
+  /*
+  rpc在服务定义中定义方法，并指定其请求和响应类型。gRPC允许您定义四种服务方法
+  官方文档有详细解释：https://grpc.io/docs/languages/java/basics/
+   */
+
+  // 普通的的请求响应    Req: simple <=========>  Res : simple
+  rpc GetStuNameByStuId(ProtoRequest) returns (ProtoResponse){
+    // 一个简单的RPC，客户端使用存根将请求发送到服务器，然后等待响应返回，就像正常的函数调用一样。
+  }
+
+  //  Req: stream <=========> Res : simple
+  rpc GetAsStreamReq(stream ProtoRequest) returns (ProtoResponse){
+    /*甲服务器端流RPC，其中客户端发送请求到服务器，并获得一个流中读取消息的序列后面。
+     客户端从返回的流中读取，直到没有更多消息为止。
+     */
+  }
+
+  //  Req: simple <=========> Res : stream
+  rpc GetReqReturnStreamRes(ProtoRequest) returns (stream ProtoResponse){
+    /*
+    甲客户端流传输的RPC，其中客户端将消息写入的序列，并且将它们发送到服务器，再次使用提供的流。
+    客户端写完消息后，它将等待服务器读取所有消息并返回其响应。您可以通过将stream关键字放在请求类型之前来指定客户端流方法。
+     */
+  }
+
+  // Req: stream <=======> Res : stream
+  rpc GetBothAsStream(stream ProtoRequest) returns (stream ProtoResponse){
+    /*
+    一个双向流RPC双方都派出使用读写流的消息序列。这两个流是独立运行的，因此客户端和服务器可以按照自己喜欢的顺序进行读写：
+    例如，服务器可以在写响应之前等待接收所有客户端消息，或者可以先读取消息再写入消息，或其他一些读写组合。
+    每个流中的消息顺序都会保留。您可以通过stream 在请求和响应之前放置关键字来指定这种类型的方法。
+     */
+  }
+}
+
+
+// 编译 Proto 请使用官方提供的插件进行编译： gradle generateProto
+// 若使用 命令编译 protoc .....将无法生成 service 的代码
