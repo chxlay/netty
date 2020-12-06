@@ -1,5 +1,7 @@
 # namespace：名称空间，定义编译成的语言，定义编译后Java 的文件的包名 package
 namespace java com.chxlay.thrift.generate
+# 生成Python 的文件包名的定义
+namespace py py.thrift.generate
 
 # typedef： 可以对 Thrift 语言中的 数据类型 与 Java 中的语言类型进行 设置 别名映射关系
 // thrift <=======> Java

@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>protocol-buffer</artifactId>
+    <packaging>pom</packaging>
 
 
     <dependencies>

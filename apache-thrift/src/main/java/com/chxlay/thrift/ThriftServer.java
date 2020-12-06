@@ -17,7 +17,7 @@ public class ThriftServer {
 
     public static void main(String[] args) throws TTransportException {
 
-        // 创建Socket
+        // 创建Socket，非阻塞式多线程服务模型，需要使用 TFramedTransport 传输方式
         TNonblockingServerSocket serverSocket = new TNonblockingServerSocket(11000);
         // 高可用的 Server ,将 socket 作为参数
         THsHaServer.Args arg = new THsHaServer.Args(serverSocket);
@@ -28,12 +28,15 @@ public class ThriftServer {
         PersonServiceImpl personService = new PersonServiceImpl();
         PersonService.Processor<PersonServiceImpl> processor = new PersonService.Processor<>(personService);
 
-        // 设置协议工厂
+        // 设置协议，设置的协议，及传输层和客户端保持一致
+
+        // 协议层设置
         arg.protocolFactory(new TCompactProtocol.Factory());
-        // 传输协议和客户端必须一致
+        // 传输层和客户端必须一致
         arg.transportFactory(new TFramedTransport.Factory());
         arg.processorFactory(new TProcessorFactory(processor));
 
+        // 半同步，半异步的服务器，依赖于TFramedTransport传输
         THsHaServer server = new THsHaServer(arg);
 
         System.out.println("服务端已启动");
