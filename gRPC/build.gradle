@@ -35,3 +35,24 @@ protobuf {
         }
     }
 }
+
+// 设置 Proto 源代码属性
+sourceSets {
+    main {
+        proto {
+            // proto 源文件加载路径设置 'src/main/proto' ;https://github.com/google/protobuf-gradle-plugin
+            srcDir 'src/main/protobuf'
+            srcDir 'src/main/protocolbuffers'
+            include '**/*.protodevel'
+        }
+        java {
+            //  ...
+        }
+    }
+    test {
+        proto {
+            // In addition to the default 'src/test/proto'
+            srcDir 'src/test/protocolbuffers'
+        }
+    }
+}

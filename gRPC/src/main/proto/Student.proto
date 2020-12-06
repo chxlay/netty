@@ -1,11 +1,11 @@
 syntax = 'proto3';
 
-package com.chxlay.poto;
+package com.chxlay.proto;
 
 // 优化模式，默认值 SPEED
 option optimize_for = SPEED;
 
-option java_package = "com.chxlay.grpc.poto";
+option java_package = "com.chxlay.grpc.protobuf";
 option java_outer_classname = "StudentProto";
 // 是否生成多个文件（protbuf重使用的是一个文件的形式）
 option java_multiple_files = true;
