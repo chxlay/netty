@@ -49,7 +49,7 @@ public class WebSocketHandler extends ChannelInboundHandlerAdapter {
 
             // 创建 WebSocket 工厂示例,WebSocket连接 Url;
             WebSocketServerHandshakerFactory webSocketFactory =
-                    new WebSocketServerHandshakerFactory("ws://127.0.0.1:8888/webSocket", null, false);
+                    new WebSocketServerHandshakerFactory("ws://127.0.0.1:8888/websocket", null, false);
 
             handshaker = webSocketFactory.newHandshaker(request);
             if (null == handshaker) {

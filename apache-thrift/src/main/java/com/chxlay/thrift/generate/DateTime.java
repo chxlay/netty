@@ -29,7 +29,9 @@ public class DateTime implements org.apache.thrift.TBase<DateTime, DateTime._Fie
     public short minute; // required
     public short second; // required
 
-    /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+    /**
+     * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+     */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
         YEAR((short) 1, "year"),
         MONTH((short) 2, "month"),
@@ -204,7 +206,9 @@ public class DateTime implements org.apache.thrift.TBase<DateTime, DateTime._Fie
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __YEAR_ISSET_ID);
     }
 
-    /** Returns true if field year is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field year is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetYear() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __YEAR_ISSET_ID);
     }
@@ -227,7 +231,9 @@ public class DateTime implements org.apache.thrift.TBase<DateTime, DateTime._Fie
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __MONTH_ISSET_ID);
     }
 
-    /** Returns true if field month is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field month is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetMonth() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __MONTH_ISSET_ID);
     }
@@ -250,7 +256,9 @@ public class DateTime implements org.apache.thrift.TBase<DateTime, DateTime._Fie
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __DAY_ISSET_ID);
     }
 
-    /** Returns true if field day is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field day is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetDay() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __DAY_ISSET_ID);
     }
@@ -273,7 +281,9 @@ public class DateTime implements org.apache.thrift.TBase<DateTime, DateTime._Fie
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __HOUR_ISSET_ID);
     }
 
-    /** Returns true if field hour is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field hour is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetHour() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __HOUR_ISSET_ID);
     }
@@ -296,7 +306,9 @@ public class DateTime implements org.apache.thrift.TBase<DateTime, DateTime._Fie
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __MINUTE_ISSET_ID);
     }
 
-    /** Returns true if field minute is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field minute is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetMinute() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __MINUTE_ISSET_ID);
     }
@@ -319,7 +331,9 @@ public class DateTime implements org.apache.thrift.TBase<DateTime, DateTime._Fie
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __SECOND_ISSET_ID);
     }
 
-    /** Returns true if field second is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field second is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetSecond() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __SECOND_ISSET_ID);
     }
@@ -406,7 +420,9 @@ public class DateTime implements org.apache.thrift.TBase<DateTime, DateTime._Fie
         throw new java.lang.IllegalStateException();
     }
 
-    /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+     */
     public boolean isSet(_Fields field) {
         if (field == null) {
             throw new java.lang.IllegalArgumentException();

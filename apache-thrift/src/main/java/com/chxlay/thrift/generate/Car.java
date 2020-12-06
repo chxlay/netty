@@ -27,7 +27,9 @@ public class Car implements org.apache.thrift.TBase<Car, Car._Fields>, java.io.S
     java.lang.String color; // optional
     public boolean is_delete; // optional
 
-    /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+    /**
+     * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+     */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
         ID((short) 1, "id"),
         BRAND((short) 2, "brand"),
@@ -163,7 +165,9 @@ public class Car implements org.apache.thrift.TBase<Car, Car._Fields>, java.io.S
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ID_ISSET_ID);
     }
 
-    /** Returns true if field id is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field id is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ID_ISSET_ID);
     }
@@ -186,7 +190,9 @@ public class Car implements org.apache.thrift.TBase<Car, Car._Fields>, java.io.S
         this.brand = null;
     }
 
-    /** Returns true if field brand is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field brand is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetBrand() {
         return this.brand != null;
     }
@@ -211,7 +217,9 @@ public class Car implements org.apache.thrift.TBase<Car, Car._Fields>, java.io.S
         this.color = null;
     }
 
-    /** Returns true if field color is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field color is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetColor() {
         return this.color != null;
     }
@@ -236,7 +244,9 @@ public class Car implements org.apache.thrift.TBase<Car, Car._Fields>, java.io.S
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __IS_DELETE_ISSET_ID);
     }
 
-    /** Returns true if field is_delete is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field is_delete is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetIs_delete() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __IS_DELETE_ISSET_ID);
     }
@@ -301,7 +311,9 @@ public class Car implements org.apache.thrift.TBase<Car, Car._Fields>, java.io.S
         throw new java.lang.IllegalStateException();
     }
 
-    /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+     */
     public boolean isSet(_Fields field) {
         if (field == null) {
             throw new java.lang.IllegalArgumentException();

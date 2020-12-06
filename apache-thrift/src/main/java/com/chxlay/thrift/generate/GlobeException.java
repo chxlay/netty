@@ -25,7 +25,9 @@ public class GlobeException extends org.apache.thrift.TException implements org.
     public @org.apache.thrift.annotation.Nullable
     java.lang.String DateTime; // optional
 
-    /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+    /**
+     * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+     */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
         MESSAGE((short) 1, "message"),
         CODE((short) 2, "code"),
@@ -152,7 +154,9 @@ public class GlobeException extends org.apache.thrift.TException implements org.
         this.message = null;
     }
 
-    /** Returns true if field message is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field message is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetMessage() {
         return this.message != null;
     }
@@ -177,7 +181,9 @@ public class GlobeException extends org.apache.thrift.TException implements org.
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CODE_ISSET_ID);
     }
 
-    /** Returns true if field code is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field code is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetCode() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CODE_ISSET_ID);
     }
@@ -200,7 +206,9 @@ public class GlobeException extends org.apache.thrift.TException implements org.
         this.DateTime = null;
     }
 
-    /** Returns true if field DateTime is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field DateTime is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetDateTime() {
         return this.DateTime != null;
     }
@@ -256,7 +264,9 @@ public class GlobeException extends org.apache.thrift.TException implements org.
         throw new java.lang.IllegalStateException();
     }
 
-    /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+     */
     public boolean isSet(_Fields field) {
         if (field == null) {
             throw new java.lang.IllegalArgumentException();

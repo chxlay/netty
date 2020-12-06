@@ -23,7 +23,9 @@ public class Date implements org.apache.thrift.TBase<Date, Date._Fields>, java.i
     public short month; // required
     public short day; // required
 
-    /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+    /**
+     * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+     */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
         YEAR((short) 1, "year"),
         MONTH((short) 2, "month"),
@@ -162,7 +164,9 @@ public class Date implements org.apache.thrift.TBase<Date, Date._Fields>, java.i
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __YEAR_ISSET_ID);
     }
 
-    /** Returns true if field year is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field year is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetYear() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __YEAR_ISSET_ID);
     }
@@ -185,7 +189,9 @@ public class Date implements org.apache.thrift.TBase<Date, Date._Fields>, java.i
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __MONTH_ISSET_ID);
     }
 
-    /** Returns true if field month is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field month is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetMonth() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __MONTH_ISSET_ID);
     }
@@ -208,7 +214,9 @@ public class Date implements org.apache.thrift.TBase<Date, Date._Fields>, java.i
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __DAY_ISSET_ID);
     }
 
-    /** Returns true if field day is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field day is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetDay() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __DAY_ISSET_ID);
     }
@@ -262,7 +270,9 @@ public class Date implements org.apache.thrift.TBase<Date, Date._Fields>, java.i
         throw new java.lang.IllegalStateException();
     }
 
-    /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+     */
     public boolean isSet(_Fields field) {
         if (field == null) {
             throw new java.lang.IllegalArgumentException();

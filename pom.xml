@@ -20,6 +20,7 @@
         <hutool.version>5.4.2</hutool.version>
         <protobuf.version>4.0.0-rc-2</protobuf.version>
         <thrift.version>0.13.0</thrift.version>
+        <log4j.version>1.7.30</log4j.version>
     </properties>
 
     <modules>
