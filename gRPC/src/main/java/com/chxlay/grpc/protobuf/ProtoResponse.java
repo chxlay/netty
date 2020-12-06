@@ -476,6 +476,7 @@ public final class ProtoResponse extends
          *
          * @return The stuName.
          */
+        @Override
         public java.lang.String getStuName() {
             java.lang.Object ref = stuName_;
             if (!(ref instanceof java.lang.String)) {
@@ -494,6 +495,7 @@ public final class ProtoResponse extends
          *
          * @return The bytes for stuName.
          */
+        @Override
         public com.google.protobuf.ByteString
         getStuNameBytes() {
             java.lang.Object ref = stuName_;

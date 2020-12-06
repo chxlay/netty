@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * å®šä¹‰RPC çš„æ–¹æ³•ï¼Œé€šè¿‡ å…³é”®å­— service å®šä¹‰
+ * ¶¨ÒåRPC µÄ·½·¨£¬Í¨¹ı ¹Ø¼ü×Ö service ¶¨Òå
  * </pre>
  */
 @javax.annotation.Generated(
@@ -201,14 +201,14 @@ public final class StudentServiceGrpc {
 
     /**
      * <pre>
-     * å®šä¹‰RPC çš„æ–¹æ³•ï¼Œé€šè¿‡ å…³é”®å­— service å®šä¹‰
+     * ¶¨ÒåRPC µÄ·½·¨£¬Í¨¹ı ¹Ø¼ü×Ö service ¶¨Òå
      * </pre>
      */
     public static abstract class StudentServiceImplBase implements io.grpc.BindableService {
 
         /**
          * <pre>
-         * æ™®é€šçš„çš„è¯·æ±‚å“åº”    Req: simple &lt;=========&gt;  Res : simple
+         * ÆÕÍ¨µÄµÄÇëÇóÏìÓ¦    Req: simple &lt;=========&gt;  Res : simple
          * </pre>
          */
         public void getStuNameByStuId(com.chxlay.grpc.protobuf.ProtoRequest request,
@@ -283,7 +283,7 @@ public final class StudentServiceGrpc {
 
     /**
      * <pre>
-     * å®šä¹‰RPC çš„æ–¹æ³•ï¼Œé€šè¿‡ å…³é”®å­— service å®šä¹‰
+     * ¶¨ÒåRPC µÄ·½·¨£¬Í¨¹ı ¹Ø¼ü×Ö service ¶¨Òå
      * </pre>
      */
     public static final class StudentServiceStub extends io.grpc.stub.AbstractAsyncStub<StudentServiceStub> {
@@ -300,7 +300,7 @@ public final class StudentServiceGrpc {
 
         /**
          * <pre>
-         * æ™®é€šçš„çš„è¯·æ±‚å“åº”    Req: simple &lt;=========&gt;  Res : simple
+         * ÆÕÍ¨µÄµÄÇëÇóÏìÓ¦    Req: simple &lt;=========&gt;  Res : simple
          * </pre>
          */
         public void getStuNameByStuId(com.chxlay.grpc.protobuf.ProtoRequest request,
@@ -345,7 +345,7 @@ public final class StudentServiceGrpc {
 
     /**
      * <pre>
-     * å®šä¹‰RPC çš„æ–¹æ³•ï¼Œé€šè¿‡ å…³é”®å­— service å®šä¹‰
+     * ¶¨ÒåRPC µÄ·½·¨£¬Í¨¹ı ¹Ø¼ü×Ö service ¶¨Òå
      * </pre>
      */
     public static final class StudentServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<StudentServiceBlockingStub> {
@@ -362,7 +362,7 @@ public final class StudentServiceGrpc {
 
         /**
          * <pre>
-         * æ™®é€šçš„çš„è¯·æ±‚å“åº”    Req: simple &lt;=========&gt;  Res : simple
+         * ÆÕÍ¨µÄµÄÇëÇóÏìÓ¦    Req: simple &lt;=========&gt;  Res : simple
          * </pre>
          */
         public com.chxlay.grpc.protobuf.ProtoResponse getStuNameByStuId(com.chxlay.grpc.protobuf.ProtoRequest request) {
@@ -384,7 +384,7 @@ public final class StudentServiceGrpc {
 
     /**
      * <pre>
-     * å®šä¹‰RPC çš„æ–¹æ³•ï¼Œé€šè¿‡ å…³é”®å­— service å®šä¹‰
+     * ¶¨ÒåRPC µÄ·½·¨£¬Í¨¹ı ¹Ø¼ü×Ö service ¶¨Òå
      * </pre>
      */
     public static final class StudentServiceFutureStub extends io.grpc.stub.AbstractFutureStub<StudentServiceFutureStub> {
@@ -401,7 +401,7 @@ public final class StudentServiceGrpc {
 
         /**
          * <pre>
-         * æ™®é€šçš„çš„è¯·æ±‚å“åº”    Req: simple &lt;=========&gt;  Res : simple
+         * ÆÕÍ¨µÄµÄÇëÇóÏìÓ¦    Req: simple &lt;=========&gt;  Res : simple
          * </pre>
          */
         public com.google.common.util.concurrent.ListenableFuture<com.chxlay.grpc.protobuf.ProtoResponse> getStuNameByStuId(
