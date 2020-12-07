@@ -14,11 +14,11 @@ import java.net.SocketAddress;
 
 /**
  * @author Alay
+ * @ChannelHandler.Sharable 多线程的环境下可用, 可记录在线数
  * @date 2020-12-01 16:09
  * @project netty-chat
  */
 @Component
-// 多线程的环境下可用,可记录在线数
 @ChannelHandler.Sharable
 public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
 
