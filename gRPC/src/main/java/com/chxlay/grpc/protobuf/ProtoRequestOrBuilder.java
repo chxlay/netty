@@ -4,13 +4,36 @@
 package com.chxlay.grpc.protobuf;
 
 public interface ProtoRequestOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.chxlay.proto.ProtoRequest)
-        com.google.protobuf.MessageOrBuilder {
+    // @@protoc_insertion_point(interface_extends:com.chxlay.proto.ProtoRequest)
+    com.google.protobuf.MessageOrBuilder {
 
-    /**
-     * <code>int32 stu_id = 1;</code>
-     *
-     * @return The stuId.
-     */
-    int getStuId();
+  /**
+   * <code>int32 stu_id = 1;</code>
+   * @return The stuId.
+   */
+  int getStuId();
+
+  /**
+   * <code>string stu_name = 2;</code>
+   * @return The stuName.
+   */
+  java.lang.String getStuName();
+  /**
+   * <code>string stu_name = 2;</code>
+   * @return The bytes for stuName.
+   */
+  com.google.protobuf.ByteString
+      getStuNameBytes();
+
+  /**
+   * <code>string stu_clazz = 3;</code>
+   * @return The stuClazz.
+   */
+  java.lang.String getStuClazz();
+  /**
+   * <code>string stu_clazz = 3;</code>
+   * @return The bytes for stuClazz.
+   */
+  com.google.protobuf.ByteString
+      getStuClazzBytes();
 }

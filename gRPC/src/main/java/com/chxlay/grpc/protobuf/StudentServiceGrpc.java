@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * ∂®“ÂRPC µƒ∑Ω∑®£¨Õ®π˝ πÿº¸◊÷ service ∂®“Â
+ * ÂÆö‰πâRPC ÁöÑÊñπÊ≥ïÔºåÈÄöËøá ÂÖ≥ÈîÆÂ≠ó service ÂÆö‰πâ
  * </pre>
  */
 @javax.annotation.Generated(
@@ -32,127 +32,127 @@ public final class StudentServiceGrpc {
 
     // Static method descriptors that strictly reflect the proto.
     private static volatile io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest,
-            com.chxlay.grpc.protobuf.ProtoResponse> getGetStuNameByStuIdMethod;
+            com.chxlay.grpc.protobuf.ProtoResponse> getReqGetResMethod;
 
     @io.grpc.stub.annotations.RpcMethod(
-            fullMethodName = SERVICE_NAME + '/' + "GetStuNameByStuId",
+            fullMethodName = SERVICE_NAME + '/' + "ReqGetRes",
             requestType = com.chxlay.grpc.protobuf.ProtoRequest.class,
             responseType = com.chxlay.grpc.protobuf.ProtoResponse.class,
             methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
     public static io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest,
-            com.chxlay.grpc.protobuf.ProtoResponse> getGetStuNameByStuIdMethod() {
-        io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse> getGetStuNameByStuIdMethod;
-        if ((getGetStuNameByStuIdMethod = StudentServiceGrpc.getGetStuNameByStuIdMethod) == null) {
+            com.chxlay.grpc.protobuf.ProtoResponse> getReqGetResMethod() {
+        io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse> getReqGetResMethod;
+        if ((getReqGetResMethod = StudentServiceGrpc.getReqGetResMethod) == null) {
             synchronized (StudentServiceGrpc.class) {
-                if ((getGetStuNameByStuIdMethod = StudentServiceGrpc.getGetStuNameByStuIdMethod) == null) {
-                    StudentServiceGrpc.getGetStuNameByStuIdMethod = getGetStuNameByStuIdMethod =
+                if ((getReqGetResMethod = StudentServiceGrpc.getReqGetResMethod) == null) {
+                    StudentServiceGrpc.getReqGetResMethod = getReqGetResMethod =
                             io.grpc.MethodDescriptor.<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse>newBuilder()
                                     .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                                    .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStuNameByStuId"))
+                                    .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReqGetRes"))
                                     .setSampledToLocalTracing(true)
                                     .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                                             com.chxlay.grpc.protobuf.ProtoRequest.getDefaultInstance()))
                                     .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                                             com.chxlay.grpc.protobuf.ProtoResponse.getDefaultInstance()))
-                                    .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetStuNameByStuId"))
+                                    .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("ReqGetRes"))
                                     .build();
                 }
             }
         }
-        return getGetStuNameByStuIdMethod;
+        return getReqGetResMethod;
     }
 
     private static volatile io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest,
-            com.chxlay.grpc.protobuf.ProtoResponse> getGetAsStreamReqMethod;
+            com.chxlay.grpc.protobuf.ProtoResponse> getReqGetStreamResMethod;
 
     @io.grpc.stub.annotations.RpcMethod(
-            fullMethodName = SERVICE_NAME + '/' + "GetAsStreamReq",
-            requestType = com.chxlay.grpc.protobuf.ProtoRequest.class,
-            responseType = com.chxlay.grpc.protobuf.ProtoResponse.class,
-            methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-    public static io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest,
-            com.chxlay.grpc.protobuf.ProtoResponse> getGetAsStreamReqMethod() {
-        io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse> getGetAsStreamReqMethod;
-        if ((getGetAsStreamReqMethod = StudentServiceGrpc.getGetAsStreamReqMethod) == null) {
-            synchronized (StudentServiceGrpc.class) {
-                if ((getGetAsStreamReqMethod = StudentServiceGrpc.getGetAsStreamReqMethod) == null) {
-                    StudentServiceGrpc.getGetAsStreamReqMethod = getGetAsStreamReqMethod =
-                            io.grpc.MethodDescriptor.<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse>newBuilder()
-                                    .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-                                    .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAsStreamReq"))
-                                    .setSampledToLocalTracing(true)
-                                    .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                                            com.chxlay.grpc.protobuf.ProtoRequest.getDefaultInstance()))
-                                    .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                                            com.chxlay.grpc.protobuf.ProtoResponse.getDefaultInstance()))
-                                    .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetAsStreamReq"))
-                                    .build();
-                }
-            }
-        }
-        return getGetAsStreamReqMethod;
-    }
-
-    private static volatile io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest,
-            com.chxlay.grpc.protobuf.ProtoResponse> getGetReqReturnStreamResMethod;
-
-    @io.grpc.stub.annotations.RpcMethod(
-            fullMethodName = SERVICE_NAME + '/' + "GetReqReturnStreamRes",
+            fullMethodName = SERVICE_NAME + '/' + "ReqGetStreamRes",
             requestType = com.chxlay.grpc.protobuf.ProtoRequest.class,
             responseType = com.chxlay.grpc.protobuf.ProtoResponse.class,
             methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
     public static io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest,
-            com.chxlay.grpc.protobuf.ProtoResponse> getGetReqReturnStreamResMethod() {
-        io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse> getGetReqReturnStreamResMethod;
-        if ((getGetReqReturnStreamResMethod = StudentServiceGrpc.getGetReqReturnStreamResMethod) == null) {
+            com.chxlay.grpc.protobuf.ProtoResponse> getReqGetStreamResMethod() {
+        io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse> getReqGetStreamResMethod;
+        if ((getReqGetStreamResMethod = StudentServiceGrpc.getReqGetStreamResMethod) == null) {
             synchronized (StudentServiceGrpc.class) {
-                if ((getGetReqReturnStreamResMethod = StudentServiceGrpc.getGetReqReturnStreamResMethod) == null) {
-                    StudentServiceGrpc.getGetReqReturnStreamResMethod = getGetReqReturnStreamResMethod =
+                if ((getReqGetStreamResMethod = StudentServiceGrpc.getReqGetStreamResMethod) == null) {
+                    StudentServiceGrpc.getReqGetStreamResMethod = getReqGetStreamResMethod =
                             io.grpc.MethodDescriptor.<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse>newBuilder()
                                     .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-                                    .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetReqReturnStreamRes"))
+                                    .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReqGetStreamRes"))
                                     .setSampledToLocalTracing(true)
                                     .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                                             com.chxlay.grpc.protobuf.ProtoRequest.getDefaultInstance()))
                                     .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                                             com.chxlay.grpc.protobuf.ProtoResponse.getDefaultInstance()))
-                                    .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetReqReturnStreamRes"))
+                                    .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("ReqGetStreamRes"))
                                     .build();
                 }
             }
         }
-        return getGetReqReturnStreamResMethod;
+        return getReqGetStreamResMethod;
     }
 
     private static volatile io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest,
-            com.chxlay.grpc.protobuf.ProtoResponse> getGetBothAsStreamMethod;
+            com.chxlay.grpc.protobuf.ResponseList> getStreamReqGetResMethod;
 
     @io.grpc.stub.annotations.RpcMethod(
-            fullMethodName = SERVICE_NAME + '/' + "GetBothAsStream",
+            fullMethodName = SERVICE_NAME + '/' + "StreamReqGetRes",
             requestType = com.chxlay.grpc.protobuf.ProtoRequest.class,
-            responseType = com.chxlay.grpc.protobuf.ProtoResponse.class,
-            methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+            responseType = com.chxlay.grpc.protobuf.ResponseList.class,
+            methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
     public static io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest,
-            com.chxlay.grpc.protobuf.ProtoResponse> getGetBothAsStreamMethod() {
-        io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse> getGetBothAsStreamMethod;
-        if ((getGetBothAsStreamMethod = StudentServiceGrpc.getGetBothAsStreamMethod) == null) {
+            com.chxlay.grpc.protobuf.ResponseList> getStreamReqGetResMethod() {
+        io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ResponseList> getStreamReqGetResMethod;
+        if ((getStreamReqGetResMethod = StudentServiceGrpc.getStreamReqGetResMethod) == null) {
             synchronized (StudentServiceGrpc.class) {
-                if ((getGetBothAsStreamMethod = StudentServiceGrpc.getGetBothAsStreamMethod) == null) {
-                    StudentServiceGrpc.getGetBothAsStreamMethod = getGetBothAsStreamMethod =
-                            io.grpc.MethodDescriptor.<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ProtoResponse>newBuilder()
-                                    .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-                                    .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBothAsStream"))
+                if ((getStreamReqGetResMethod = StudentServiceGrpc.getStreamReqGetResMethod) == null) {
+                    StudentServiceGrpc.getStreamReqGetResMethod = getStreamReqGetResMethod =
+                            io.grpc.MethodDescriptor.<com.chxlay.grpc.protobuf.ProtoRequest, com.chxlay.grpc.protobuf.ResponseList>newBuilder()
+                                    .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+                                    .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamReqGetRes"))
                                     .setSampledToLocalTracing(true)
                                     .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                                             com.chxlay.grpc.protobuf.ProtoRequest.getDefaultInstance()))
                                     .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                                            com.chxlay.grpc.protobuf.ProtoResponse.getDefaultInstance()))
-                                    .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetBothAsStream"))
+                                            com.chxlay.grpc.protobuf.ResponseList.getDefaultInstance()))
+                                    .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("StreamReqGetRes"))
                                     .build();
                 }
             }
         }
-        return getGetBothAsStreamMethod;
+        return getStreamReqGetResMethod;
+    }
+
+    private static volatile io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.StreamRequest,
+            com.chxlay.grpc.protobuf.StreamResponse> getStreamReqGetStreamResMethod;
+
+    @io.grpc.stub.annotations.RpcMethod(
+            fullMethodName = SERVICE_NAME + '/' + "StreamReqGetStreamRes",
+            requestType = com.chxlay.grpc.protobuf.StreamRequest.class,
+            responseType = com.chxlay.grpc.protobuf.StreamResponse.class,
+            methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+    public static io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.StreamRequest,
+            com.chxlay.grpc.protobuf.StreamResponse> getStreamReqGetStreamResMethod() {
+        io.grpc.MethodDescriptor<com.chxlay.grpc.protobuf.StreamRequest, com.chxlay.grpc.protobuf.StreamResponse> getStreamReqGetStreamResMethod;
+        if ((getStreamReqGetStreamResMethod = StudentServiceGrpc.getStreamReqGetStreamResMethod) == null) {
+            synchronized (StudentServiceGrpc.class) {
+                if ((getStreamReqGetStreamResMethod = StudentServiceGrpc.getStreamReqGetStreamResMethod) == null) {
+                    StudentServiceGrpc.getStreamReqGetStreamResMethod = getStreamReqGetStreamResMethod =
+                            io.grpc.MethodDescriptor.<com.chxlay.grpc.protobuf.StreamRequest, com.chxlay.grpc.protobuf.StreamResponse>newBuilder()
+                                    .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+                                    .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamReqGetStreamRes"))
+                                    .setSampledToLocalTracing(true)
+                                    .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                            com.chxlay.grpc.protobuf.StreamRequest.getDefaultInstance()))
+                                    .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                            com.chxlay.grpc.protobuf.StreamResponse.getDefaultInstance()))
+                                    .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("StreamReqGetStreamRes"))
+                                    .build();
+                }
+            }
+        }
+        return getStreamReqGetStreamResMethod;
     }
 
     /**
@@ -201,29 +201,19 @@ public final class StudentServiceGrpc {
 
     /**
      * <pre>
-     * ∂®“ÂRPC µƒ∑Ω∑®£¨Õ®π˝ πÿº¸◊÷ service ∂®“Â
+     * ÂÆö‰πâRPC ÁöÑÊñπÊ≥ïÔºåÈÄöËøá ÂÖ≥ÈîÆÂ≠ó service ÂÆö‰πâ
      * </pre>
      */
     public static abstract class StudentServiceImplBase implements io.grpc.BindableService {
 
         /**
          * <pre>
-         * ∆’Õ®µƒµƒ«Î«ÛœÏ”¶    Req: simple &lt;=========&gt;  Res : simple
+         * ÊôÆÈÄöÁöÑÁöÑËØ∑Ê±ÇÂìçÂ∫î    Req: simple &lt;=========&gt;  Res : simple
          * </pre>
          */
-        public void getStuNameByStuId(com.chxlay.grpc.protobuf.ProtoRequest request,
-                                      io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetStuNameByStuIdMethod(), responseObserver);
-        }
-
-        /**
-         * <pre>
-         *  Req: stream &lt;=========&gt; Res : simple
-         * </pre>
-         */
-        public io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoRequest> getAsStreamReq(
-                io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
-            return asyncUnimplementedStreamingCall(getGetAsStreamReqMethod(), responseObserver);
+        public void reqGetRes(com.chxlay.grpc.protobuf.ProtoRequest request,
+                              io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
+            asyncUnimplementedUnaryCall(getReqGetResMethod(), responseObserver);
         }
 
         /**
@@ -231,9 +221,19 @@ public final class StudentServiceGrpc {
          *  Req: simple &lt;=========&gt; Res : stream
          * </pre>
          */
-        public void getReqReturnStreamRes(com.chxlay.grpc.protobuf.ProtoRequest request,
-                                          io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetReqReturnStreamResMethod(), responseObserver);
+        public void reqGetStreamRes(com.chxlay.grpc.protobuf.ProtoRequest request,
+                                    io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
+            asyncUnimplementedUnaryCall(getReqGetStreamResMethod(), responseObserver);
+        }
+
+        /**
+         * <pre>
+         *  Req: stream &lt;=========&gt; Res : simple
+         * </pre>
+         */
+        public io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoRequest> streamReqGetRes(
+                io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ResponseList> responseObserver) {
+            return asyncUnimplementedStreamingCall(getStreamReqGetResMethod(), responseObserver);
         }
 
         /**
@@ -241,49 +241,49 @@ public final class StudentServiceGrpc {
          * Req: stream &lt;=======&gt; Res : stream
          * </pre>
          */
-        public io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoRequest> getBothAsStream(
-                io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
-            return asyncUnimplementedStreamingCall(getGetBothAsStreamMethod(), responseObserver);
+        public io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.StreamRequest> streamReqGetStreamRes(
+                io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.StreamResponse> responseObserver) {
+            return asyncUnimplementedStreamingCall(getStreamReqGetStreamResMethod(), responseObserver);
         }
 
         @java.lang.Override
         public final io.grpc.ServerServiceDefinition bindService() {
             return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
                     .addMethod(
-                            getGetStuNameByStuIdMethod(),
+                            getReqGetResMethod(),
                             asyncUnaryCall(
                                     new MethodHandlers<
                                             com.chxlay.grpc.protobuf.ProtoRequest,
                                             com.chxlay.grpc.protobuf.ProtoResponse>(
-                                            this, METHODID_GET_STU_NAME_BY_STU_ID)))
+                                            this, METHODID_REQ_GET_RES)))
                     .addMethod(
-                            getGetAsStreamReqMethod(),
-                            asyncClientStreamingCall(
-                                    new MethodHandlers<
-                                            com.chxlay.grpc.protobuf.ProtoRequest,
-                                            com.chxlay.grpc.protobuf.ProtoResponse>(
-                                            this, METHODID_GET_AS_STREAM_REQ)))
-                    .addMethod(
-                            getGetReqReturnStreamResMethod(),
+                            getReqGetStreamResMethod(),
                             asyncServerStreamingCall(
                                     new MethodHandlers<
                                             com.chxlay.grpc.protobuf.ProtoRequest,
                                             com.chxlay.grpc.protobuf.ProtoResponse>(
-                                            this, METHODID_GET_REQ_RETURN_STREAM_RES)))
+                                            this, METHODID_REQ_GET_STREAM_RES)))
                     .addMethod(
-                            getGetBothAsStreamMethod(),
-                            asyncBidiStreamingCall(
+                            getStreamReqGetResMethod(),
+                            asyncClientStreamingCall(
                                     new MethodHandlers<
                                             com.chxlay.grpc.protobuf.ProtoRequest,
-                                            com.chxlay.grpc.protobuf.ProtoResponse>(
-                                            this, METHODID_GET_BOTH_AS_STREAM)))
+                                            com.chxlay.grpc.protobuf.ResponseList>(
+                                            this, METHODID_STREAM_REQ_GET_RES)))
+                    .addMethod(
+                            getStreamReqGetStreamResMethod(),
+                            asyncBidiStreamingCall(
+                                    new MethodHandlers<
+                                            com.chxlay.grpc.protobuf.StreamRequest,
+                                            com.chxlay.grpc.protobuf.StreamResponse>(
+                                            this, METHODID_STREAM_REQ_GET_STREAM_RES)))
                     .build();
         }
     }
 
     /**
      * <pre>
-     * ∂®“ÂRPC µƒ∑Ω∑®£¨Õ®π˝ πÿº¸◊÷ service ∂®“Â
+     * ÂÆö‰πâRPC ÁöÑÊñπÊ≥ïÔºåÈÄöËøá ÂÖ≥ÈîÆÂ≠ó service ÂÆö‰πâ
      * </pre>
      */
     public static final class StudentServiceStub extends io.grpc.stub.AbstractAsyncStub<StudentServiceStub> {
@@ -300,24 +300,13 @@ public final class StudentServiceGrpc {
 
         /**
          * <pre>
-         * ∆’Õ®µƒµƒ«Î«ÛœÏ”¶    Req: simple &lt;=========&gt;  Res : simple
+         * ÊôÆÈÄöÁöÑÁöÑËØ∑Ê±ÇÂìçÂ∫î    Req: simple &lt;=========&gt;  Res : simple
          * </pre>
          */
-        public void getStuNameByStuId(com.chxlay.grpc.protobuf.ProtoRequest request,
-                                      io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
+        public void reqGetRes(com.chxlay.grpc.protobuf.ProtoRequest request,
+                              io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
             asyncUnaryCall(
-                    getChannel().newCall(getGetStuNameByStuIdMethod(), getCallOptions()), request, responseObserver);
-        }
-
-        /**
-         * <pre>
-         *  Req: stream &lt;=========&gt; Res : simple
-         * </pre>
-         */
-        public io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoRequest> getAsStreamReq(
-                io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
-            return asyncClientStreamingCall(
-                    getChannel().newCall(getGetAsStreamReqMethod(), getCallOptions()), responseObserver);
+                    getChannel().newCall(getReqGetResMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -325,10 +314,21 @@ public final class StudentServiceGrpc {
          *  Req: simple &lt;=========&gt; Res : stream
          * </pre>
          */
-        public void getReqReturnStreamRes(com.chxlay.grpc.protobuf.ProtoRequest request,
-                                          io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
+        public void reqGetStreamRes(com.chxlay.grpc.protobuf.ProtoRequest request,
+                                    io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
             asyncServerStreamingCall(
-                    getChannel().newCall(getGetReqReturnStreamResMethod(), getCallOptions()), request, responseObserver);
+                    getChannel().newCall(getReqGetStreamResMethod(), getCallOptions()), request, responseObserver);
+        }
+
+        /**
+         * <pre>
+         *  Req: stream &lt;=========&gt; Res : simple
+         * </pre>
+         */
+        public io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoRequest> streamReqGetRes(
+                io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ResponseList> responseObserver) {
+            return asyncClientStreamingCall(
+                    getChannel().newCall(getStreamReqGetResMethod(), getCallOptions()), responseObserver);
         }
 
         /**
@@ -336,16 +336,16 @@ public final class StudentServiceGrpc {
          * Req: stream &lt;=======&gt; Res : stream
          * </pre>
          */
-        public io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoRequest> getBothAsStream(
-                io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse> responseObserver) {
+        public io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.StreamRequest> streamReqGetStreamRes(
+                io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.StreamResponse> responseObserver) {
             return asyncBidiStreamingCall(
-                    getChannel().newCall(getGetBothAsStreamMethod(), getCallOptions()), responseObserver);
+                    getChannel().newCall(getStreamReqGetStreamResMethod(), getCallOptions()), responseObserver);
         }
     }
 
     /**
      * <pre>
-     * ∂®“ÂRPC µƒ∑Ω∑®£¨Õ®π˝ πÿº¸◊÷ service ∂®“Â
+     * ÂÆö‰πâRPC ÁöÑÊñπÊ≥ïÔºåÈÄöËøá ÂÖ≥ÈîÆÂ≠ó service ÂÆö‰πâ
      * </pre>
      */
     public static final class StudentServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<StudentServiceBlockingStub> {
@@ -362,12 +362,12 @@ public final class StudentServiceGrpc {
 
         /**
          * <pre>
-         * ∆’Õ®µƒµƒ«Î«ÛœÏ”¶    Req: simple &lt;=========&gt;  Res : simple
+         * ÊôÆÈÄöÁöÑÁöÑËØ∑Ê±ÇÂìçÂ∫î    Req: simple &lt;=========&gt;  Res : simple
          * </pre>
          */
-        public com.chxlay.grpc.protobuf.ProtoResponse getStuNameByStuId(com.chxlay.grpc.protobuf.ProtoRequest request) {
+        public com.chxlay.grpc.protobuf.ProtoResponse reqGetRes(com.chxlay.grpc.protobuf.ProtoRequest request) {
             return blockingUnaryCall(
-                    getChannel(), getGetStuNameByStuIdMethod(), getCallOptions(), request);
+                    getChannel(), getReqGetResMethod(), getCallOptions(), request);
         }
 
         /**
@@ -375,16 +375,16 @@ public final class StudentServiceGrpc {
          *  Req: simple &lt;=========&gt; Res : stream
          * </pre>
          */
-        public java.util.Iterator<com.chxlay.grpc.protobuf.ProtoResponse> getReqReturnStreamRes(
+        public java.util.Iterator<com.chxlay.grpc.protobuf.ProtoResponse> reqGetStreamRes(
                 com.chxlay.grpc.protobuf.ProtoRequest request) {
             return blockingServerStreamingCall(
-                    getChannel(), getGetReqReturnStreamResMethod(), getCallOptions(), request);
+                    getChannel(), getReqGetStreamResMethod(), getCallOptions(), request);
         }
     }
 
     /**
      * <pre>
-     * ∂®“ÂRPC µƒ∑Ω∑®£¨Õ®π˝ πÿº¸◊÷ service ∂®“Â
+     * ÂÆö‰πâRPC ÁöÑÊñπÊ≥ïÔºåÈÄöËøá ÂÖ≥ÈîÆÂ≠ó service ÂÆö‰πâ
      * </pre>
      */
     public static final class StudentServiceFutureStub extends io.grpc.stub.AbstractFutureStub<StudentServiceFutureStub> {
@@ -401,20 +401,20 @@ public final class StudentServiceGrpc {
 
         /**
          * <pre>
-         * ∆’Õ®µƒµƒ«Î«ÛœÏ”¶    Req: simple &lt;=========&gt;  Res : simple
+         * ÊôÆÈÄöÁöÑÁöÑËØ∑Ê±ÇÂìçÂ∫î    Req: simple &lt;=========&gt;  Res : simple
          * </pre>
          */
-        public com.google.common.util.concurrent.ListenableFuture<com.chxlay.grpc.protobuf.ProtoResponse> getStuNameByStuId(
+        public com.google.common.util.concurrent.ListenableFuture<com.chxlay.grpc.protobuf.ProtoResponse> reqGetRes(
                 com.chxlay.grpc.protobuf.ProtoRequest request) {
             return futureUnaryCall(
-                    getChannel().newCall(getGetStuNameByStuIdMethod(), getCallOptions()), request);
+                    getChannel().newCall(getReqGetResMethod(), getCallOptions()), request);
         }
     }
 
-    private static final int METHODID_GET_STU_NAME_BY_STU_ID = 0;
-    private static final int METHODID_GET_REQ_RETURN_STREAM_RES = 1;
-    private static final int METHODID_GET_AS_STREAM_REQ = 2;
-    private static final int METHODID_GET_BOTH_AS_STREAM = 3;
+    private static final int METHODID_REQ_GET_RES = 0;
+    private static final int METHODID_REQ_GET_STREAM_RES = 1;
+    private static final int METHODID_STREAM_REQ_GET_RES = 2;
+    private static final int METHODID_STREAM_REQ_GET_STREAM_RES = 3;
 
     private static final class MethodHandlers<Req, Resp> implements
             io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -433,12 +433,12 @@ public final class StudentServiceGrpc {
         @java.lang.SuppressWarnings("unchecked")
         public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
             switch (methodId) {
-                case METHODID_GET_STU_NAME_BY_STU_ID:
-                    serviceImpl.getStuNameByStuId((com.chxlay.grpc.protobuf.ProtoRequest) request,
+                case METHODID_REQ_GET_RES:
+                    serviceImpl.reqGetRes((com.chxlay.grpc.protobuf.ProtoRequest) request,
                             (io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse>) responseObserver);
                     break;
-                case METHODID_GET_REQ_RETURN_STREAM_RES:
-                    serviceImpl.getReqReturnStreamRes((com.chxlay.grpc.protobuf.ProtoRequest) request,
+                case METHODID_REQ_GET_STREAM_RES:
+                    serviceImpl.reqGetStreamRes((com.chxlay.grpc.protobuf.ProtoRequest) request,
                             (io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse>) responseObserver);
                     break;
                 default:
@@ -451,12 +451,12 @@ public final class StudentServiceGrpc {
         public io.grpc.stub.StreamObserver<Req> invoke(
                 io.grpc.stub.StreamObserver<Resp> responseObserver) {
             switch (methodId) {
-                case METHODID_GET_AS_STREAM_REQ:
-                    return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getAsStreamReq(
-                            (io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse>) responseObserver);
-                case METHODID_GET_BOTH_AS_STREAM:
-                    return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getBothAsStream(
-                            (io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ProtoResponse>) responseObserver);
+                case METHODID_STREAM_REQ_GET_RES:
+                    return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamReqGetRes(
+                            (io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.ResponseList>) responseObserver);
+                case METHODID_STREAM_REQ_GET_STREAM_RES:
+                    return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamReqGetStreamRes(
+                            (io.grpc.stub.StreamObserver<com.chxlay.grpc.protobuf.StreamResponse>) responseObserver);
                 default:
                     throw new AssertionError();
             }
@@ -510,10 +510,10 @@ public final class StudentServiceGrpc {
                 if (result == null) {
                     serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
                             .setSchemaDescriptor(new StudentServiceFileDescriptorSupplier())
-                            .addMethod(getGetStuNameByStuIdMethod())
-                            .addMethod(getGetAsStreamReqMethod())
-                            .addMethod(getGetReqReturnStreamResMethod())
-                            .addMethod(getGetBothAsStreamMethod())
+                            .addMethod(getReqGetResMethod())
+                            .addMethod(getReqGetStreamResMethod())
+                            .addMethod(getStreamReqGetResMethod())
+                            .addMethod(getStreamReqGetStreamResMethod())
                             .build();
                 }
             }

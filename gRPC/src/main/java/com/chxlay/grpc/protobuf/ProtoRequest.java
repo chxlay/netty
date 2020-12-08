@@ -7,525 +7,761 @@ package com.chxlay.grpc.protobuf;
  * <pre>
  * 定义请求数据
  * </pre>
- * <p>
+ *
  * Protobuf type {@code com.chxlay.proto.ProtoRequest}
  */
 public final class ProtoRequest extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:com.chxlay.proto.ProtoRequest)
-        ProtoRequestOrBuilder {
-    private static final long serialVersionUID = 0L;
+    com.google.protobuf.GeneratedMessageV3 implements
+    // @@protoc_insertion_point(message_implements:com.chxlay.proto.ProtoRequest)
+    ProtoRequestOrBuilder {
+private static final long serialVersionUID = 0L;
+  // Use ProtoRequest.newBuilder() to construct.
+  private ProtoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    super(builder);
+  }
+  private ProtoRequest() {
+    stuName_ = "";
+    stuClazz_ = "";
+  }
 
-    // Use ProtoRequest.newBuilder() to construct.
-    private ProtoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ProtoRequest();
+  }
+
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ProtoRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
     }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
 
-    private ProtoRequest() {
-    }
+            stuId_ = input.readInt32();
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
-        return new ProtoRequest();
-    }
+            stuName_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-        return this.unknownFields;
-    }
-
-    private ProtoRequest(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-            throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-            boolean done = false;
-            while (!done) {
-                int tag = input.readTag();
-                switch (tag) {
-                    case 0:
-                        done = true;
-                        break;
-                    case 8: {
-
-                        stuId_ = input.readInt32();
-                        break;
-                    }
-                    default: {
-                        if (!parseUnknownField(
-                                input, unknownFields, extensionRegistry, tag)) {
-                            done = true;
-                        }
-                        break;
-                    }
-                }
+            stuClazz_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(
-                    e).setUnfinishedMessage(this);
-        } finally {
-            this.unknownFields = unknownFields.build();
-            makeExtensionsImmutable();
+            break;
+          }
         }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
     }
+  }
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_descriptor;
+  }
 
+  @java.lang.Override
+  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+    return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_fieldAccessorTable
+        .ensureFieldAccessorsInitialized(
+            com.chxlay.grpc.protobuf.ProtoRequest.class, com.chxlay.grpc.protobuf.ProtoRequest.Builder.class);
+  }
+
+  public static final int STU_ID_FIELD_NUMBER = 1;
+  private int stuId_;
+  /**
+   * <code>int32 stu_id = 1;</code>
+   * @return The stuId.
+   */
+  @java.lang.Override
+  public int getStuId() {
+    return stuId_;
+  }
+
+  public static final int STU_NAME_FIELD_NUMBER = 2;
+  private volatile java.lang.Object stuName_;
+  /**
+   * <code>string stu_name = 2;</code>
+   * @return The stuName.
+   */
+  @java.lang.Override
+  public java.lang.String getStuName() {
+    java.lang.Object ref = stuName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      stuName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string stu_name = 2;</code>
+   * @return The bytes for stuName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getStuNameBytes() {
+    java.lang.Object ref = stuName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      stuName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int STU_CLAZZ_FIELD_NUMBER = 3;
+  private volatile java.lang.Object stuClazz_;
+  /**
+   * <code>string stu_clazz = 3;</code>
+   * @return The stuClazz.
+   */
+  @java.lang.Override
+  public java.lang.String getStuClazz() {
+    java.lang.Object ref = stuClazz_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      stuClazz_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string stu_clazz = 3;</code>
+   * @return The bytes for stuClazz.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getStuClazzBytes() {
+    java.lang.Object ref = stuClazz_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      stuClazz_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (stuId_ != 0) {
+      output.writeInt32(1, stuId_);
+    }
+    if (!getStuNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stuName_);
+    }
+    if (!getStuClazzBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, stuClazz_);
+    }
+    unknownFields.writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (stuId_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(1, stuId_);
+    }
+    if (!getStuNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stuName_);
+    }
+    if (!getStuClazzBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, stuClazz_);
+    }
+    size += unknownFields.getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof com.chxlay.grpc.protobuf.ProtoRequest)) {
+      return super.equals(obj);
+    }
+    com.chxlay.grpc.protobuf.ProtoRequest other = (com.chxlay.grpc.protobuf.ProtoRequest) obj;
+
+    if (getStuId()
+        != other.getStuId()) return false;
+    if (!getStuName()
+        .equals(other.getStuName())) return false;
+    if (!getStuClazz()
+        .equals(other.getStuClazz())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + STU_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getStuId();
+    hash = (37 * hash) + STU_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getStuName().hashCode();
+    hash = (37 * hash) + STU_CLAZZ_FIELD_NUMBER;
+    hash = (53 * hash) + getStuClazz().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
+      com.google.protobuf.ByteString data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
+      com.google.protobuf.ByteString data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(byte[] data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseDelimitedFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseDelimitedFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+  public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  @java.lang.Override
+  public Builder newBuilderForType() { return newBuilder(); }
+  public static Builder newBuilder() {
+    return DEFAULT_INSTANCE.toBuilder();
+  }
+  public static Builder newBuilder(com.chxlay.grpc.protobuf.ProtoRequest prototype) {
+    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+  }
+  @java.lang.Override
+  public Builder toBuilder() {
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
+  }
+
+  @java.lang.Override
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    Builder builder = new Builder(parent);
+    return builder;
+  }
+  /**
+   * <pre>
+   * 定义请求数据
+   * </pre>
+   *
+   * Protobuf type {@code com.chxlay.proto.ProtoRequest}
+   */
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+      // @@protoc_insertion_point(builder_implements:com.chxlay.proto.ProtoRequest)
+      com.chxlay.grpc.protobuf.ProtoRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
-        return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_descriptor;
+        getDescriptor() {
+      return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
-        return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        com.chxlay.grpc.protobuf.ProtoRequest.class, com.chxlay.grpc.protobuf.ProtoRequest.Builder.class);
-    }
-
-    public static final int STU_ID_FIELD_NUMBER = 1;
-    private int stuId_;
-
-    /**
-     * <code>int32 stu_id = 1;</code>
-     *
-     * @return The stuId.
-     */
-    @java.lang.Override
-    public int getStuId() {
-        return stuId_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
-        if (stuId_ != 0) {
-            output.writeInt32(1, stuId_);
-        }
-        unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (stuId_ != 0) {
-            size += com.google.protobuf.CodedOutputStream
-                    .computeInt32Size(1, stuId_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (!(obj instanceof com.chxlay.grpc.protobuf.ProtoRequest)) {
-            return super.equals(obj);
-        }
-        com.chxlay.grpc.protobuf.ProtoRequest other = (com.chxlay.grpc.protobuf.ProtoRequest) obj;
-
-        if (getStuId()
-                != other.getStuId()) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-        if (memoizedHashCode != 0) {
-            return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + STU_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getStuId();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-                .parseWithIOException(PARSER, input);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-                .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-                .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-                .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-                .parseWithIOException(PARSER, input);
-    }
-
-    public static com.chxlay.grpc.protobuf.ProtoRequest parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-                .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() {
-        return newBuilder();
-    }
-
-    public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-    }
-
-    public static Builder newBuilder(com.chxlay.grpc.protobuf.ProtoRequest prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-
-    @java.lang.Override
-    public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-                ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-    }
-
-    /**
-     * <pre>
-     * 定义请求数据
-     * </pre>
-     * <p>
-     * Protobuf type {@code com.chxlay.proto.ProtoRequest}
-     */
-    public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:com.chxlay.proto.ProtoRequest)
-            com.chxlay.grpc.protobuf.ProtoRequestOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-            return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-            return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            com.chxlay.grpc.protobuf.ProtoRequest.class, com.chxlay.grpc.protobuf.ProtoRequest.Builder.class);
-        }
-
-        // Construct using com.chxlay.grpc.protobuf.ProtoRequest.newBuilder()
-        private Builder() {
-            maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-            super(parent);
-            maybeForceBuilderInitialization();
-        }
-
-        private void maybeForceBuilderInitialization() {
-            if (com.google.protobuf.GeneratedMessageV3
-                    .alwaysUseFieldBuilders) {
-            }
-        }
-
-        @java.lang.Override
-        public Builder clear() {
-            super.clear();
-            stuId_ = 0;
-
-            return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-            return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_descriptor;
-        }
-
-        @java.lang.Override
-        public com.chxlay.grpc.protobuf.ProtoRequest getDefaultInstanceForType() {
-            return com.chxlay.grpc.protobuf.ProtoRequest.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public com.chxlay.grpc.protobuf.ProtoRequest build() {
-            com.chxlay.grpc.protobuf.ProtoRequest result = buildPartial();
-            if (!result.isInitialized()) {
-                throw newUninitializedMessageException(result);
-            }
-            return result;
-        }
-
-        @java.lang.Override
-        public com.chxlay.grpc.protobuf.ProtoRequest buildPartial() {
-            com.chxlay.grpc.protobuf.ProtoRequest result = new com.chxlay.grpc.protobuf.ProtoRequest(this);
-            result.stuId_ = stuId_;
-            onBuilt();
-            return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-            return super.clone();
-        }
-
-        @java.lang.Override
-        public Builder setField(
-                com.google.protobuf.Descriptors.FieldDescriptor field,
-                java.lang.Object value) {
-            return super.setField(field, value);
-        }
-
-        @java.lang.Override
-        public Builder clearField(
-                com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return super.clearField(field);
-        }
-
-        @java.lang.Override
-        public Builder clearOneof(
-                com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return super.clearOneof(oneof);
-        }
-
-        @java.lang.Override
-        public Builder setRepeatedField(
-                com.google.protobuf.Descriptors.FieldDescriptor field,
-                int index, java.lang.Object value) {
-            return super.setRepeatedField(field, index, value);
-        }
-
-        @java.lang.Override
-        public Builder addRepeatedField(
-                com.google.protobuf.Descriptors.FieldDescriptor field,
-                java.lang.Object value) {
-            return super.addRepeatedField(field, value);
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof com.chxlay.grpc.protobuf.ProtoRequest) {
-                return mergeFrom((com.chxlay.grpc.protobuf.ProtoRequest) other);
-            } else {
-                super.mergeFrom(other);
-                return this;
-            }
-        }
-
-        public Builder mergeFrom(com.chxlay.grpc.protobuf.ProtoRequest other) {
-            if (other == com.chxlay.grpc.protobuf.ProtoRequest.getDefaultInstance()) return this;
-            if (other.getStuId() != 0) {
-                setStuId(other.getStuId());
-            }
-            this.mergeUnknownFields(other.unknownFields);
-            onChanged();
-            return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-            return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            com.chxlay.grpc.protobuf.ProtoRequest parsedMessage = null;
-            try {
-                parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-                parsedMessage = (com.chxlay.grpc.protobuf.ProtoRequest) e.getUnfinishedMessage();
-                throw e.unwrapIOException();
-            } finally {
-                if (parsedMessage != null) {
-                    mergeFrom(parsedMessage);
-                }
-            }
-            return this;
-        }
-
-        private int stuId_;
-
-        /**
-         * <code>int32 stu_id = 1;</code>
-         *
-         * @return The stuId.
-         */
-        @java.lang.Override
-        public int getStuId() {
-            return stuId_;
-        }
-
-        /**
-         * <code>int32 stu_id = 1;</code>
-         *
-         * @param value The stuId to set.
-         * @return This builder for chaining.
-         */
-        public Builder setStuId(int value) {
-
-            stuId_ = value;
-            onChanged();
-            return this;
-        }
-
-        /**
-         * <code>int32 stu_id = 1;</code>
-         *
-         * @return This builder for chaining.
-         */
-        public Builder clearStuId() {
-
-            stuId_ = 0;
-            onChanged();
-            return this;
-        }
-
-        @java.lang.Override
-        public final Builder setUnknownFields(
-                final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-                final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.chxlay.proto.ProtoRequest)
+      return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.chxlay.grpc.protobuf.ProtoRequest.class, com.chxlay.grpc.protobuf.ProtoRequest.Builder.class);
     }
 
-    // @@protoc_insertion_point(class_scope:com.chxlay.proto.ProtoRequest)
-    private static final com.chxlay.grpc.protobuf.ProtoRequest DEFAULT_INSTANCE;
-
-    static {
-        DEFAULT_INSTANCE = new com.chxlay.grpc.protobuf.ProtoRequest();
+    // Construct using com.chxlay.grpc.protobuf.ProtoRequest.newBuilder()
+    private Builder() {
+      maybeForceBuilderInitialization();
     }
 
-    public static com.chxlay.grpc.protobuf.ProtoRequest getDefaultInstance() {
-        return DEFAULT_INSTANCE;
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      super(parent);
+      maybeForceBuilderInitialization();
     }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
+    }
+    @java.lang.Override
+    public Builder clear() {
+      super.clear();
+      stuId_ = 0;
 
-    private static final com.google.protobuf.Parser<ProtoRequest>
-            PARSER = new com.google.protobuf.AbstractParser<ProtoRequest>() {
-        @java.lang.Override
-        public ProtoRequest parsePartialFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return new ProtoRequest(input, extensionRegistry);
-        }
-    };
+      stuName_ = "";
 
-    public static com.google.protobuf.Parser<ProtoRequest> parser() {
-        return PARSER;
+      stuClazz_ = "";
+
+      return this;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ProtoRequest> getParserForType() {
-        return PARSER;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.chxlay.grpc.protobuf.StudentProto.internal_static_com_chxlay_proto_ProtoRequest_descriptor;
     }
 
     @java.lang.Override
     public com.chxlay.grpc.protobuf.ProtoRequest getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
+      return com.chxlay.grpc.protobuf.ProtoRequest.getDefaultInstance();
     }
+
+    @java.lang.Override
+    public com.chxlay.grpc.protobuf.ProtoRequest build() {
+      com.chxlay.grpc.protobuf.ProtoRequest result = buildPartial();
+      if (!result.isInitialized()) {
+        throw newUninitializedMessageException(result);
+      }
+      return result;
+    }
+
+    @java.lang.Override
+    public com.chxlay.grpc.protobuf.ProtoRequest buildPartial() {
+      com.chxlay.grpc.protobuf.ProtoRequest result = new com.chxlay.grpc.protobuf.ProtoRequest(this);
+      result.stuId_ = stuId_;
+      result.stuName_ = stuName_;
+      result.stuClazz_ = stuClazz_;
+      onBuilt();
+      return result;
+    }
+
+    @java.lang.Override
+    public Builder clone() {
+      return super.clone();
+    }
+    @java.lang.Override
+    public Builder setField(
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
+      return super.setField(field, value);
+    }
+    @java.lang.Override
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
+      return super.clearField(field);
+    }
+    @java.lang.Override
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      return super.clearOneof(oneof);
+    }
+    @java.lang.Override
+    public Builder setRepeatedField(
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
+      return super.setRepeatedField(field, index, value);
+    }
+    @java.lang.Override
+    public Builder addRepeatedField(
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
+      return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof com.chxlay.grpc.protobuf.ProtoRequest) {
+        return mergeFrom((com.chxlay.grpc.protobuf.ProtoRequest)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(com.chxlay.grpc.protobuf.ProtoRequest other) {
+      if (other == com.chxlay.grpc.protobuf.ProtoRequest.getDefaultInstance()) return this;
+      if (other.getStuId() != 0) {
+        setStuId(other.getStuId());
+      }
+      if (!other.getStuName().isEmpty()) {
+        stuName_ = other.stuName_;
+        onChanged();
+      }
+      if (!other.getStuClazz().isEmpty()) {
+        stuClazz_ = other.stuClazz_;
+        onChanged();
+      }
+      this.mergeUnknownFields(other.unknownFields);
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      com.chxlay.grpc.protobuf.ProtoRequest parsedMessage = null;
+      try {
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.chxlay.grpc.protobuf.ProtoRequest) e.getUnfinishedMessage();
+        throw e.unwrapIOException();
+      } finally {
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
+      return this;
+    }
+
+    private int stuId_ ;
+    /**
+     * <code>int32 stu_id = 1;</code>
+     * @return The stuId.
+     */
+    @java.lang.Override
+    public int getStuId() {
+      return stuId_;
+    }
+    /**
+     * <code>int32 stu_id = 1;</code>
+     * @param value The stuId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStuId(int value) {
+      
+      stuId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 stu_id = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStuId() {
+      
+      stuId_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object stuName_ = "";
+    /**
+     * <code>string stu_name = 2;</code>
+     * @return The stuName.
+     */
+    public java.lang.String getStuName() {
+      java.lang.Object ref = stuName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stuName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string stu_name = 2;</code>
+     * @return The bytes for stuName.
+     */
+    public com.google.protobuf.ByteString
+        getStuNameBytes() {
+      java.lang.Object ref = stuName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stuName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string stu_name = 2;</code>
+     * @param value The stuName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStuName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      stuName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string stu_name = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStuName() {
+      
+      stuName_ = getDefaultInstance().getStuName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string stu_name = 2;</code>
+     * @param value The bytes for stuName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStuNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      stuName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object stuClazz_ = "";
+    /**
+     * <code>string stu_clazz = 3;</code>
+     * @return The stuClazz.
+     */
+    public java.lang.String getStuClazz() {
+      java.lang.Object ref = stuClazz_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stuClazz_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string stu_clazz = 3;</code>
+     * @return The bytes for stuClazz.
+     */
+    public com.google.protobuf.ByteString
+        getStuClazzBytes() {
+      java.lang.Object ref = stuClazz_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stuClazz_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string stu_clazz = 3;</code>
+     * @param value The stuClazz to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStuClazz(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      stuClazz_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string stu_clazz = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStuClazz() {
+      
+      stuClazz_ = getDefaultInstance().getStuClazz();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string stu_clazz = 3;</code>
+     * @param value The bytes for stuClazz to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStuClazzBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      stuClazz_ = value;
+      onChanged();
+      return this;
+    }
+    @java.lang.Override
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
+      return super.setUnknownFields(unknownFields);
+    }
+
+    @java.lang.Override
+    public final Builder mergeUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
+      return super.mergeUnknownFields(unknownFields);
+    }
+
+
+    // @@protoc_insertion_point(builder_scope:com.chxlay.proto.ProtoRequest)
+  }
+
+  // @@protoc_insertion_point(class_scope:com.chxlay.proto.ProtoRequest)
+  private static final com.chxlay.grpc.protobuf.ProtoRequest DEFAULT_INSTANCE;
+  static {
+    DEFAULT_INSTANCE = new com.chxlay.grpc.protobuf.ProtoRequest();
+  }
+
+  public static com.chxlay.grpc.protobuf.ProtoRequest getDefaultInstance() {
+    return DEFAULT_INSTANCE;
+  }
+
+  private static final com.google.protobuf.Parser<ProtoRequest>
+      PARSER = new com.google.protobuf.AbstractParser<ProtoRequest>() {
+    @java.lang.Override
+    public ProtoRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new ProtoRequest(input, extensionRegistry);
+    }
+  };
+
+  public static com.google.protobuf.Parser<ProtoRequest> parser() {
+    return PARSER;
+  }
+
+  @java.lang.Override
+  public com.google.protobuf.Parser<ProtoRequest> getParserForType() {
+    return PARSER;
+  }
+
+  @java.lang.Override
+  public com.chxlay.grpc.protobuf.ProtoRequest getDefaultInstanceForType() {
+    return DEFAULT_INSTANCE;
+  }
 
 }
 

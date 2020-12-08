@@ -4,21 +4,72 @@
 package com.chxlay.grpc.protobuf;
 
 public interface ProtoResponseOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.chxlay.proto.ProtoResponse)
-        com.google.protobuf.MessageOrBuilder {
+    // @@protoc_insertion_point(interface_extends:com.chxlay.proto.ProtoResponse)
+    com.google.protobuf.MessageOrBuilder {
 
-    /**
-     * <code>string stu_name = 1;</code>
-     *
-     * @return The stuName.
-     */
-    java.lang.String getStuName();
+  /**
+   * <code>string id = 1;</code>
+   * @return The id.
+   */
+  java.lang.String getId();
+  /**
+   * <code>string id = 1;</code>
+   * @return The bytes for id.
+   */
+  com.google.protobuf.ByteString
+      getIdBytes();
 
-    /**
-     * <code>string stu_name = 1;</code>
-     *
-     * @return The bytes for stuName.
-     */
-    com.google.protobuf.ByteString
-    getStuNameBytes();
+  /**
+   * <code>string first_name = 2;</code>
+   * @return The firstName.
+   */
+  java.lang.String getFirstName();
+  /**
+   * <code>string first_name = 2;</code>
+   * @return The bytes for firstName.
+   */
+  com.google.protobuf.ByteString
+      getFirstNameBytes();
+
+  /**
+   * <code>string last_name = 3;</code>
+   * @return The lastName.
+   */
+  java.lang.String getLastName();
+  /**
+   * <code>string last_name = 3;</code>
+   * @return The bytes for lastName.
+   */
+  com.google.protobuf.ByteString
+      getLastNameBytes();
+
+  /**
+   * <code>int32 age = 4;</code>
+   * @return The age.
+   */
+  int getAge();
+
+  /**
+   * <code>int32 height = 5;</code>
+   * @return The height.
+   */
+  int getHeight();
+
+  /**
+   * <code>int32 weight = 6;</code>
+   * @return The weight.
+   */
+  int getWeight();
+
+  /**
+   * <code>string address = 7;</code>
+   * @return The address.
+   */
+  java.lang.String getAddress();
+  /**
+   * <code>string address = 7;</code>
+   * @return The bytes for address.
+   */
+  com.google.protobuf.ByteString
+      getAddressBytes();
 }
