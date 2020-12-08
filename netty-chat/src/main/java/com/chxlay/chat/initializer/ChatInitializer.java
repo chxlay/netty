@@ -6,7 +6,6 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
-import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
 import io.netty.handler.stream.ChunkedWriteHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -34,12 +33,10 @@ public class ChatInitializer extends ChannelInitializer<SocketChannel> {
                 .addLast("chunkedWriteHandler", new ChunkedWriteHandler())
                 // 将多条信息整合为一条,将一个Http消息尽心聚合,设置单次请求的文件大小上限
                 .addLast(new HttpObjectAggregator(8192))
-                // 将多条信息整合为一条
-                .addLast(new HttpObjectAggregator(65536))
                 // 创建握手操作
-                 .addLast(new WebSocketServerProtocolHandler("/websocket"))
+                 //.addLast(new WebSocketServerProtocolHandler("/websocket"))
                 // 自定义的握手操作
-                //.addLast(webSocketHandler)
+                .addLast(webSocketHandler)
 
                 // 将自定义的处理逻辑 Handler 加入
                 .addLast(chatHandler);
