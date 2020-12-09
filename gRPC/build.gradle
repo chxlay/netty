@@ -12,14 +12,14 @@ repositories {
 
 dependencies {
     // 由于项目是使用Maven,此处使用gradle依赖，因此将项目再maven后再运行,请看 .proto 文件的最后有描述 <@注意>
-   /* compile(
-            'io.grpc:grpc-okhttp:1.34.0',
-            'io.grpc:grpc-protobuf-lite:1.34.0',
-            'io.grpc:grpc-core:1.34.0',
-            'io.grpc:grpc-stub:1.34.0',
-            'com.google.protobuf:protobuf-parent:4.0.0-rc-2',
-            'com.google.protobuf:protobuf-bom:4.0.0-rc-2'
-    )*/
+    /* compile(
+             'io.grpc:grpc-okhttp:1.34.0',
+             'io.grpc:grpc-protobuf-lite:1.34.0',
+             'io.grpc:grpc-core:1.34.0',
+             'io.grpc:grpc-stub:1.34.0',
+             'com.google.protobuf:protobuf-parent:4.0.0-rc-2',
+             'com.google.protobuf:protobuf-bom:4.0.0-rc-2'
+     )*/
 }
 
 
@@ -32,9 +32,15 @@ protobuf {
             artifact = 'io.grpc:protoc-gen-grpc-java:1.34.0'
         }
     }
+    // 配置生成的 ProtoBuf 代码存放的根目录,
+    generateProtoTasks.generatedFilesBaseDir = "src"
+
     generateProtoTasks {
         all()*.plugins {
-            grpc {}
+            grpc {
+                // 配置生成的 gRPC 的代码的目录
+                setOutputSubDir 'java'
+            }
         }
     }
 }

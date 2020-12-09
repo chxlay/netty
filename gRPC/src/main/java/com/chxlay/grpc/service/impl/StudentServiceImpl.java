@@ -22,7 +22,7 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
      */
     @Override
     public void reqGetRes(ProtoRequest request, StreamObserver<ProtoResponse> responseObserver) {
-        System.out.println("客户端传过来的参数：" + request.getStuId());
+        System.out.println("客户端>stuId:" + request.getStuId() + ",姓名：" + request.getStuName() + ",班级" + request.getStuClazz());
         // 构建返回数据
         ProtoResponse protoResponse = ProtoResponse.newBuilder()
                 .setFirstName("西门")

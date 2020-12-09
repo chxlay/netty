@@ -26,11 +26,11 @@ public class GrpcClient {
 
         GrpcClient grpcClient = new GrpcClient();
         // 调用服务端的测试方法一
-        //grpcClient.reqGetRes(channel);
+        // grpcClient.reqGetRes(channel);
         //调用测试方法二
         //grpcClient.reqGetStreamRes(channel);
         // 调用测试方法 三
-       // grpcClient.streamReqGetRes(channel);
+        // grpcClient.streamReqGetRes(channel);
         // 调用测试服方法四
         grpcClient.streamReqGetStreamRes(channel);
     }
@@ -45,7 +45,7 @@ public class GrpcClient {
         StudentServiceGrpc.StudentServiceBlockingStub blockingStub = StudentServiceGrpc.newBlockingStub(channel);
 
         // 构建请求参数
-        ProtoRequest protoRequest = ProtoRequest.newBuilder().setStuId(10).build();
+        ProtoRequest protoRequest = ProtoRequest.newBuilder().setStuName("金三胖").setStuClazz("朝鲜班").setStuId(10).build();
         // 执行请求
         ProtoResponse response = blockingStub.reqGetRes(protoRequest);
         // 返回结果打印展示
