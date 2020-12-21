@@ -89,17 +89,15 @@ public class NioClient {
                     // 读取服务器端发送来的数据
                     ByteBuffer readBuffer = ByteBuffer.allocate(512);
                     readBuffer.clear();
-                    while (true) {
-                        int read = clientChannel.read(readBuffer);
-                        if (read > 0) {
-                            // 读取数据有效
-                            readBuffer.flip();
-                            Charset charset = Charset.forName("utf-8");
-                            char[] array = charset.decode(readBuffer).array();
-                            String message = String.valueOf(array);
-                            System.out.println("服务端发送来的消息：" + message);
-                            break;
-                        }
+
+                    int read = clientChannel.read(readBuffer);
+                    if (read > 0) {
+                        // 读取数据有效
+                        readBuffer.flip();
+                        Charset charset = Charset.forName("utf-8");
+                        char[] array = charset.decode(readBuffer).array();
+                        String message = String.valueOf(array);
+                        System.out.println("服务端发送来的消息：" + message);
                     }
                 }
 

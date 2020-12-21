@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.nio.ByteBuffer;
-import java.nio.channels.*;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 import java.util.Iterator;
 import java.util.Map;
@@ -87,21 +90,17 @@ public class NioServer {
                     ByteBuffer readBuffer = ByteBuffer.allocate(512);
                     readBuffer.clear();
 
-                    String receivedMessage;
+                    String receivedMessage = null;
                     // 开始读数据
-                    while (true) {
-                        int read = client.read(readBuffer);
-                        if (read > 0) {
-                            // 读到数据了,结束本次读取
-                            // 数据读取完毕,打印控制台,给其他客户端推送出去（聊天室效果）
-                            readBuffer.flip();
-
-                            Charset charset = Charset.forName("utf-8");
-                            char[] array = charset.decode(readBuffer).array();
-                            receivedMessage = String.valueOf(array);
-                            System.out.println("client:" + client + ",发送内容：" + receivedMessage);
-                            break;
-                        }
+                    int read = client.read(readBuffer);
+                    if (read > 0) {
+                        // 读到数据了,结束本次读取
+                        // 数据读取完毕,打印控制台,给其他客户端推送出去（聊天室效果）
+                        readBuffer.flip();
+                        Charset charset = Charset.forName("utf-8");
+                        char[] array = charset.decode(readBuffer).array();
+                        receivedMessage = String.valueOf(array);
+                        System.out.println("client:" + client + ",发送内容：" + receivedMessage);
                     }
 
                     // 向所有客户端推消息
