@@ -19,6 +19,6 @@ message Person{
 }
 
 // 源代码生成命令，生成的Java文件路径存放位置   protobuf源文件路径
-// protoc --java_out=src/main/java src/protobuf/Student.proto
+// protoc --java_out=src/main/java src/protobuf/Person.proto
 
 // 注意，生成的文件千万不要对其进行任何的修改，当做一个只读文件使用

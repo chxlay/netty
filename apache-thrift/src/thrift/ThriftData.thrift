@@ -29,7 +29,7 @@ const set<string> FANS = ["user1","user2"];
 const list<string> NAMES_LIST = ["Tom", "Jack"];
 
 
-# 第一个示例与 thrift 数据类型使用,属性之间 使用分号，或者逗号，或者不写，都是可以的
+# 第一个示例以 thrift 数据类型使用,属性之间 使用分号，或者逗号，或者不写，都是可以的
 struct Person{
     1: required i8 id;
     2:optional string name;

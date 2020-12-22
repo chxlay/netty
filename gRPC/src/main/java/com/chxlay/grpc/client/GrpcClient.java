@@ -26,13 +26,13 @@ public class GrpcClient {
 
         GrpcClient grpcClient = new GrpcClient();
         // 调用服务端的测试方法一
-        // grpcClient.reqGetRes(channel);
+         grpcClient.reqGetRes(channel);
         //调用测试方法二
         //grpcClient.reqGetStreamRes(channel);
         // 调用测试方法 三
         // grpcClient.streamReqGetRes(channel);
         // 调用测试服方法四
-        grpcClient.streamReqGetStreamRes(channel);
+       // grpcClient.streamReqGetStreamRes(channel);
     }
 
     /**
