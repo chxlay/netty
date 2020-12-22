@@ -8,4 +8,5 @@ package com.chxlay.common.constants;
 public interface CommonConstants {
 
     String UPGRADE_WEBSOCKET = "webSocket";
+    String CODE_OK = "OK";
 }

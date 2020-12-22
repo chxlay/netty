@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8"/>
+  <title>WebSocket</title>
+</head>
+<body>
+<script type="text/javascript">
+  var socket;
+
+  if (!window.WebSocket) {
+    alert('浏览器不支持socket连接');
+  }
+
+  function initWebSocket(path) {
+    if (!window.WebSocket) {
+      // webSocket 不存在
+      return;
+    }
+    socket = new WebSocket(path);
+    socket.onmessage = function (event) {
+      var ta = document.getElementById('responseText');
+      ta.value = ta.value + '\n' + event.data;
+    };
+
+    socket.onclose = function (event) {
+      var ta = document.getElementById('responseText');
+      ta.value = '连接断开';
+    };
+  }
+
+  /**
+   * 发送文本信息
+   * @param message
+   */
+  function sendMessage(message) {
+    if (!window.WebSocket) {
+      // webSocket 不存在
+      return;
+    }
+    if (socket.readyState == WebSocket.OPEN) {
+      // 连接状态的
+      socket.send(message);
+    } else {
+      alert('Socket未连接');
+    }
+  }
+
+  /**
+   *
+   */
+  function doConnect() {
+    let path = '';
+    let selectedIndex = document.getElementById('selectWay').selectedIndex;
+    path += document.getElementById('selectWay').options[selectedIndex]
+      .value;
+
+    path += document.getElementById('hostId').value;
+    path += ':';
+    path += document.getElementById('portId').value;
+    path += document.getElementById('pathId').value;
+
+    let token = document.getElementById(`authId`).value;
+    if (token) {
+      path += '?Authorization=Bearer ' + token;
+    }
+    console.log(path);
+    initWebSocket(path);
+  }
+</script>
+<div style="width: 1000px; margin: 0 auto">
+  <form onsubmit="return false;">
+    <h3>客户端:</h3>
+    通讯协议:
+    <select id="selectWay" name="agreement">
+      <option value="ws://" selected>ws</option>
+      <option value="wss://">wss</option>
+    </select>
+    请输入地址：
+    <input
+      id="hostId"
+      name="host"
+      style="height: 20px; width: 200px"
+      value="pigx-gateway"
+    />
+    请输入端口号:
+    <input
+      id="portId"
+      name="port"
+      style="height: 20px; width: 100px"
+      value="9999"
+    />
+    请输入路径:
+    <input
+      id="pathId"
+      name="path"
+      style="height: 20px; width: 100px"
+      value="/socket/student"
+    />
+
+    <br>
+    <br>
+
+    Token：
+    <input
+      id="authId"
+      name="auth"
+      style="height: 20px; width: 300px"
+      value="2f2b2315-9d88-4c97-94d4-43adca42ade4"/>
+    <!--连接服务器-->
+    <input type="button" value="连接" onclick="doConnect()"/>
+
+    <textarea
+      id="messageId"
+      name="message"
+      style="height: 300px; width: 700px; margin-top: 20px"
+    ></textarea>
+    <input
+      type="button"
+      value="发送文本数据"
+      onclick="sendMessage(this.form.message.value)"
+    />
+    <h3>服务端:</h3>
+    <textarea
+      id="responseText"
+      style="width: 700px; height: 300px"
+    ></textarea>
+
+    <!--清空相应数据-->
+    <input
+      type="button"
+      onclick="javascript:document.getElementById('responseText').value=''"
+      value="清空"
+    />
+  </form>
+</div>
+</body>
+</html>
