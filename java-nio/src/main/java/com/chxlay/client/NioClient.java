@@ -105,6 +105,5 @@ public class NioClient {
                 iterator.remove();
             }
         }
-
     }
 }

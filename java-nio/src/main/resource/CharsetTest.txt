@@ -1,0 +1,2 @@
+English:hello
+Chinese：你好

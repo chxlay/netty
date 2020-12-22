@@ -126,7 +126,5 @@ public class NioServer {
                 iterator.remove();
             }
         }
-
-
     }
 }
