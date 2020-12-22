@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @project Braineex
  */
 @Component
-public class SocketMaConsumer {
+public class SocketMqConsumer {
 
 
     @Autowired
