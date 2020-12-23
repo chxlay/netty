@@ -1,0 +1,13 @@
+server:
+  port: 11001
+spring:
+  application:
+    name: my-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心中动态创建路由的功能，利用微服务的名称进行路由
+      routes:
+          filters:
+            - AddRequestHeader=X-Request-red, blue
