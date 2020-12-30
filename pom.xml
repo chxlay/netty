@@ -35,6 +35,7 @@
         <module>apache-thrift</module>
         <module>gRPC</module>
         <module>gateway</module>
+        <module>socket-demo</module>
     </modules>
 
     <dependencies>
