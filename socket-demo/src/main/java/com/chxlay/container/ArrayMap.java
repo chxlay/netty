@@ -9,10 +9,12 @@ import java.util.HashMap;
  * 初始化固定大小的 Map , Map数据一旦满了,后来的数据会顺序的替换老数据
  * <p>
  * 新进数据==inData==>> | data | data | data |   ==outData==>>淘汰数据
- *  ----->>>>>>  此类性能不及 QueueMap 已经废弃<<<<<<<<-------------------
+ * ----->>>>>>  此类性能不及 QueueMap 已经废弃<<<<<<<<-------------------
+ *
  * @author Alay
  * @date 2020-12-09 11:24
  * @project Braineex
+ * @see /src/main/java/com/chxlay/container/QueueMap.java
  */
 @Deprecated
 public final class ArrayMap<K, V> {
