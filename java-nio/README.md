@@ -8,7 +8,7 @@ Java.io中最为核心的一个概念：流（stream），面向流的编程，J
 
 Java .nio中拥有三个核心概念：Selector(选择器)、Channel（通道）、Buffer （缓冲区）,在Java.nio中，是面向 块（block） 
 
-或是 缓冲区（Buffer）编程的。Buffer 本质上市一块内存，底层实现上实现上是一个数组，数据的读、写都是由 Buffer 来实现的，
+或是 缓冲区（Buffer）编程的。Buffer 本质上是一块内存，底层实现上实现上是一个数组，数据的读、写都是由 Buffer 来实现的，
 
 在Nio 中，数据的读、写 是可以在同一个 Buffer 缓冲区中进行的，除了数组之外，Buffer 还提供了对数据的结构化访问方式，并且可以追踪到
 
