@@ -185,7 +185,7 @@ Slice(): 和原有的buff是共享的相同的底层数组
         buffer.put((byte) i);
     }
 
-    /**通过 slice,可以指定起始位置,解释位置,进行切片得到一个新的Buff,新的buff 并不是一个独立的数据，
+    /**通过 slice,可以指定起始位置,结束位置,进行切片得到一个新的Buff,新的buff 并不是一个独立的数据，
      * 而是引用 原来老的 buffer 中指定索引期间的数据,原buffer 数据的修改，新的都会随之改变
      * 新的buffer 的limit ，position 则是一个独立的。并不影响原 buffer 中的 limit 和 position
      */
